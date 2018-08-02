@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Judwaa_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                 Legend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmb-cE-TZD">
+                                <rect key="frame" x="0.0" y="612" width="375" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ODm-Rc-1ca">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="615"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nmb-cE-TZD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7Fe-SK-qKs"/>
+                            <constraint firstItem="Nmb-cE-TZD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KUw-9F-uyu"/>
+                            <constraint firstItem="Nmb-cE-TZD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ndk-th-bfK"/>
+                            <constraint firstItem="Nmb-cE-TZD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="592" id="jyA-Kb-ogu"/>
+                            <constraint firstItem="ODm-Rc-1ca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kPa-EQ-ZmE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ODm-Rc-1ca" secondAttribute="bottom" constant="52" id="m4G-tG-3Cq"/>
+                            <constraint firstItem="ODm-Rc-1ca" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vur-QZ-DhT"/>
+                            <constraint firstItem="ODm-Rc-1ca" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zsc-AI-3Mo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="legend" destination="Nmb-cE-TZD" id="f98-4K-Qfo"/>
+                        <outlet property="mainTable" destination="ODm-Rc-1ca" id="xPo-9Y-7MU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
