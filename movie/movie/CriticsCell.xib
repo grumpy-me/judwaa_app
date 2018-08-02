@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="criticCell" id="gTV-IL-0wX" customClass="CriticsCell" customModule="movie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anupama_chopra" translatesAutoresizingMaskIntoConstraints="NO" id="bNo-Z7-wJ1" userLabel="Image">
+                        <rect key="frame" x="30" y="10" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="dHS-59-mbI"/>
+                            <constraint firstAttribute="height" constant="80" id="erQ-97-knK"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Anupama Chopra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQq-ua-zXA" userLabel="Name">
+                        <rect key="frame" x="21" y="100" width="98" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3h-W0-NiW" userLabel="Rating">
+                        <rect key="frame" x="52" y="119.5" width="37.5" height="15.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="bNo-Z7-wJ1" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="8Md-Oi-epX"/>
+                <constraint firstItem="f3h-W0-NiW" firstAttribute="top" secondItem="hQq-ua-zXA" secondAttribute="bottom" constant="5" id="Jyz-Ro-A4G"/>
+                <constraint firstAttribute="bottom" secondItem="f3h-W0-NiW" secondAttribute="bottom" constant="5" id="diW-9p-8la"/>
+                <constraint firstItem="f3h-W0-NiW" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="faL-F2-d5n"/>
+                <constraint firstItem="hQq-ua-zXA" firstAttribute="top" secondItem="bNo-Z7-wJ1" secondAttribute="bottom" constant="10" id="o0P-k2-C0Y"/>
+                <constraint firstItem="hQq-ua-zXA" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="saT-Yo-HVq"/>
+                <constraint firstItem="bNo-Z7-wJ1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="uam-fU-UMC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="image" destination="bNo-Z7-wJ1" id="Z3z-s0-yfg"/>
+                <outlet property="name" destination="hQq-ua-zXA" id="A19-cv-TKV"/>
+                <outlet property="rating" destination="f3h-W0-NiW" id="3CF-sh-DAF"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="anupama_chopra" width="180" height="179"/>
+    </resources>
+</document>
