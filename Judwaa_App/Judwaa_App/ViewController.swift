@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         id=data
         print(id)
+        mainTable.reloadData()
 
     }
     
@@ -26,14 +27,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row==0{
             
             let cell=tableView.dequeueReusableCell(withIdentifier: "buttons", for: indexPath) as! buttons
             // this is where set the delegate to self, where the item is created
-            cell.delegate=self
+         //   cell.delegate=self
             return cell
             
         }
@@ -51,23 +51,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 
             else
             {
-                let cell=tableView.dequeueReusableCell(withIdentifier: "TheCell1", for: indexPath) as! TheCell1
-                
+                let cell=tableView.dequeueReusableCell(withIdentifier: "TheCell", for: indexPath) as! TheCell
+                cell.updatehight()
                 return cell
             }
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if (indexPath.row == 0) {
-            
-            return 60.0;
-        }
-        
-        return 200.0;
-        
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//
+//        if (indexPath.row == 0) {
+//
+//            return 60.0;
+//        }
+//
+//        return 200.0;
+//
+//    }
     
     
     @IBOutlet var mainTable: UITableView!
@@ -88,7 +88,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         mainTable.dataSource=self
         mainTable.delegate=self
-        
+        mainTable.rowHeight=UITableViewAutomaticDimension
         
     }
     

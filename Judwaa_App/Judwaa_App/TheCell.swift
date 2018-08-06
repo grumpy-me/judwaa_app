@@ -9,10 +9,12 @@
 import UIKit
 import Foundation
 
-class TheCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+class TheCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    var int: Int=0
     var yourOtherArray = ["MonkeysRule", "RemoveMe", "SwiftRules", "a","b","c"]
     
+    @IBOutlet var hight: NSLayoutConstraint!
     
 //    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 //        super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -29,15 +31,26 @@ class TheCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDele
 //        fatalError("init(coder:) has not been implemented")
 //    }
     
+    func updatehight()
+    {
+        int=7
+        hight.constant=CGFloat((int / 4 + 1) * 50)
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3  // whatever according to api
+        
+        int = 7
+        return int // whatever according to api
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         
-        cell.backgroundColor=UIColor.red
+  //      cell.frame.size=CGSize(width: 25, height: 15)
+        
+   //     cell.backgroundColor=UIColor.red
      //   how to put text in the cell??
         
         
@@ -56,18 +69,24 @@ class TheCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDele
         
     }
     
+    @IBOutlet var call: UIButton!
     @IBOutlet var collection: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
        
+        call.layer.borderColor=UIColor.green.cgColor
         collection.delegate=self
                collection.dataSource=self
               collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        collection.isScrollEnabled=false
+        
+//        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell") as! CollectionViewCell
         
         threatre.text="PVR Forum"
         km.text="2.5 km"
         
+        collection.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
     }
     
 
@@ -76,6 +95,5 @@ class TheCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDele
 
         // Configure the view for the selected state
     }
-    
     
 }
