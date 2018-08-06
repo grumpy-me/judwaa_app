@@ -10,6 +10,8 @@ import UIKit
 
 class reviewersCell: UICollectionViewCell {
     
+    var flag: Bool = true
+    
     var rating : Float = 4.5
 
     @IBOutlet weak var superView: UIView!
@@ -26,11 +28,13 @@ class reviewersCell: UICollectionViewCell {
     
     @IBOutlet weak var ratingLabel: UILabel!
     
+    @IBOutlet weak var review: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        reviewerImage.image = #imageLiteral(resourceName: "anupama_chopra")
-        let mask1 = UIImageView(image: #imageLiteral(resourceName: "circle"))
+        reviewerImage.image = UIImage(named: "anupama_chopra")
+        let mask1 = UIImageView(image: UIImage(named: "circle"))
         mask1.frame = reviewerImage.bounds
         reviewerImage.mask = mask1
         
@@ -43,7 +47,7 @@ class reviewersCell: UICollectionViewCell {
     func setUpCellElements() {
         for x in 0...4 {
             if rating - Float(x) > 0 {
-                starImages[x].image = #imageLiteral(resourceName: "star")
+                starImages[x].image = UIImage(named: "star")
                 starImages[x].contentMode = .scaleAspectFit
             
                 let mask1 = UIView()
@@ -52,7 +56,7 @@ class reviewersCell: UICollectionViewCell {
                 starImages[x].mask = mask1
             }
             
-            let outline = UIImageView(image: #imageLiteral(resourceName: "starOutline"))
+            let outline = UIImageView(image: UIImage(named: "starOutline"))
             outline.contentMode = .scaleAspectFit
             ratingView.addSubview(outline)
             outline.translatesAutoresizingMaskIntoConstraints = false
@@ -69,6 +73,15 @@ class reviewersCell: UICollectionViewCell {
     }
 
     @IBAction func buttonPressed(_ sender: Any) {
+        
+        if flag {
+            review.backgroundColor = UIColor.cyan
+            flag = false
+        }else{
+            review.backgroundColor = UIColor.red
+            flag = true
+        }
+        
         print("buttonWorking!!!!!!")
     }
 }

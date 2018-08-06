@@ -152,6 +152,7 @@
                 <outlet property="name" destination="XxR-lV-Zuu" id="wVw-t5-jDk"/>
                 <outlet property="ratingLabel" destination="zYq-he-P2u" id="bA2-I6-Jnm"/>
                 <outlet property="ratingView" destination="kEl-va-Jfr" id="SoG-dw-nBF"/>
+                <outlet property="review" destination="a1f-n9-oWn" id="eul-RO-zN9"/>
                 <outlet property="reviewerImage" destination="0ok-vf-fnd" id="sh0-kq-ZoZ"/>
                 <outlet property="superView" destination="Cpi-zX-UyD" id="asZ-aE-Q5P"/>
                 <outlet property="title" destination="hP1-Ko-3S0" id="Ypm-ab-2lT"/>

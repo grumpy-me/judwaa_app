@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="218" id="KGk-i7-Jjw" customClass="TheCell" customModule="Judwaa_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="218"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="217.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PVR Koramanagala" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aX5-ia-PWv">
+                        <rect key="frame" x="20" y="33" width="230" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="230" id="Nqf-pK-cXv"/>
+                            <constraint firstAttribute="height" constant="20" id="cDu-O0-W6s"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="2.5 KM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zv8-Sy-oCR">
+                        <rect key="frame" x="327" y="36" width="43" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rFI-Xz-xcf">
+                        <rect key="frame" x="20" y="80" width="236" height="121"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="121" id="N0B-z6-mfm"/>
+                            <constraint firstAttribute="width" constant="236" id="i47-Pc-yjg"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="hxU-Im-6pn">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyg-Ja-Kjv">
+                        <rect key="frame" x="328" y="87" width="42" height="30"/>
+                        <state key="normal" title="Button" image="Screen Shot 2018-08-02 at 8.00.53 PM"/>
+                        <connections>
+                            <action selector="call:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2xu-54-2NS"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rFI-Xz-xcf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="02t-ll-sWP"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="rFI-Xz-xcf" secondAttribute="bottom" constant="6" id="4YR-tS-ucE"/>
+                    <constraint firstItem="rFI-Xz-xcf" firstAttribute="top" secondItem="Zv8-Sy-oCR" secondAttribute="bottom" constant="19" id="6LF-g8-yBg"/>
+                    <constraint firstItem="Zv8-Sy-oCR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="25" id="Ahc-8j-Z0N"/>
+                    <constraint firstItem="rFI-Xz-xcf" firstAttribute="top" secondItem="aX5-ia-PWv" secondAttribute="bottom" constant="27" id="D9u-OG-sj5"/>
+                    <constraint firstItem="Iyg-Ja-Kjv" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Ebb-Ur-2k5"/>
+                    <constraint firstItem="aX5-ia-PWv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="22" id="FpK-Yt-cUW"/>
+                    <constraint firstItem="Zv8-Sy-oCR" firstAttribute="leading" secondItem="aX5-ia-PWv" secondAttribute="trailing" constant="77" id="KFL-1P-6DW"/>
+                    <constraint firstItem="aX5-ia-PWv" firstAttribute="leading" secondItem="rFI-Xz-xcf" secondAttribute="leading" id="Klt-Of-huj"/>
+                    <constraint firstItem="Iyg-Ja-Kjv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="76" id="d1Y-Bc-UPP"/>
+                    <constraint firstItem="Iyg-Ja-Kjv" firstAttribute="leading" secondItem="rFI-Xz-xcf" secondAttribute="trailing" constant="72" id="fUu-pc-jzc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="call" destination="Iyg-Ja-Kjv" id="DuU-2z-2Zg"/>
+                <outlet property="collection" destination="rFI-Xz-xcf" id="1G5-6g-ixA"/>
+                <outlet property="hight" destination="N0B-z6-mfm" id="EQp-5J-8eZ"/>
+                <outlet property="km" destination="Zv8-Sy-oCR" id="RA8-Hn-V6Q"/>
+                <outlet property="threatre" destination="aX5-ia-PWv" id="Uyu-CI-AJv"/>
+            </connections>
+            <point key="canvasLocation" x="60" y="-352"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Screen Shot 2018-08-02 at 8.00.53 PM" width="40" height="30"/>
+    </resources>
+</document>

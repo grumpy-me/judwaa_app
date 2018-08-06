@@ -22,7 +22,7 @@ class SelfRatingTableCell: UITableViewCell {
         // Initialization code
         
         selfImage.backgroundColor = UIColor.cyan
-        let mask1 = UIImageView(image: #imageLiteral(resourceName: "circle"))
+        let mask1 = UIImageView(image: UIImage(named: "circle"))
         mask1.frame = selfImage.bounds
         selfImage.mask = mask1
         let mask2 = UIView()
@@ -34,7 +34,7 @@ class SelfRatingTableCell: UITableViewCell {
         for x in 0...4 {
             
             if(Float(x) < rating) {
-                ratingStar[x].image = #imageLiteral(resourceName: "star")
+                ratingStar[x].image = UIImage(named: "star")
             }
             
             if (rating - Float(x)) < 1.0 && Float(x) < rating {
@@ -42,7 +42,7 @@ class SelfRatingTableCell: UITableViewCell {
                 ratingStar[x].mask = mask2
             }
             
-            let outline = UIImageView(image: #imageLiteral(resourceName: "starOutline"))
+            let outline = UIImageView(image: UIImage(named: "starOutline"))
             contentView.addSubview(outline)
             outline.translatesAutoresizingMaskIntoConstraints = false
             let horizontalConstraint = outline.centerXAnchor.constraint(equalTo: ratingStar[x].centerXAnchor)
