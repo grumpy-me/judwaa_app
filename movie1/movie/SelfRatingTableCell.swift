@@ -10,7 +10,7 @@ import UIKit
 
 class SelfRatingTableCell: UITableViewCell {
     
-    var rating : Float = 3.15
+    var rating : Float = 3.5
 
     @IBOutlet weak var selfImage: UIImageView!
     @IBOutlet weak var selfName: UILabel!

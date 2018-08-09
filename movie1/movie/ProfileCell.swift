@@ -10,14 +10,18 @@ import UIKit
 
 class ProfileCell: UICollectionViewCell {
 
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var celebrityName: UILabel!
-    @IBOutlet weak var cekebrityType: UILabel!
+
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileName: UILabel!
+    @IBOutlet weak var profileType: UILabel!
+    var profilePageLink = String()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-        image.layer.cornerRadius = 2
+        profileImage.layer.cornerRadius = 2
+        profileImage.contentMode = .scaleAspectFit
     }
     
     

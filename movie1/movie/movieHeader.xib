@@ -22,21 +22,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="judwa2" translatesAutoresizingMaskIntoConstraints="NO" id="VDq-nk-1e8" userLabel="moviePoster">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="6rV-os-MpR"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAb-6b-io0" userLabel="movieName">
-                                <rect key="frame" x="20" y="180" width="335" height="21"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Judwaa 2 (Hindi Movie) (U/A)">
-                                        <attributes>
-                                            <font key="NSFont" size="18" name="Arial-Black"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAb-6b-io0" userLabel="movieName">
+                                <rect key="frame" x="20" y="177" width="335" height="24"/>
+                                <attributedString key="attributedText"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S45-xm-SYA" userLabel="movieRating">
@@ -55,7 +45,6 @@
                             <constraint firstItem="VDq-nk-1e8" firstAttribute="top" secondItem="aFl-fP-vf7" secondAttribute="top" id="K8I-a0-ES9"/>
                             <constraint firstAttribute="bottom" secondItem="S45-xm-SYA" secondAttribute="bottom" id="LjC-QP-VDh"/>
                             <constraint firstItem="RAb-6b-io0" firstAttribute="leading" secondItem="aFl-fP-vf7" secondAttribute="leading" constant="20" id="RkD-fc-DQC"/>
-                            <constraint firstAttribute="height" priority="900" constant="220" id="RlA-qt-jdC"/>
                             <constraint firstItem="S45-xm-SYA" firstAttribute="top" secondItem="RAb-6b-io0" secondAttribute="bottom" constant="2" id="Xha-Mf-UOP"/>
                             <constraint firstItem="VDq-nk-1e8" firstAttribute="leading" secondItem="aFl-fP-vf7" secondAttribute="leading" id="cYo-dy-wPv"/>
                         </constraints>

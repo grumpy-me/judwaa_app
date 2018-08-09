@@ -11,7 +11,7 @@ import Foundation
 
 class TheCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    var int: Int=0
+    var countVar: Int=0
     var yourOtherArray = ["MonkeysRule", "RemoveMe", "SwiftRules", "a","b","c"]
     
     @IBOutlet var hight: NSLayoutConstraint!
@@ -33,15 +33,19 @@ class TheCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDele
     
     func updatehight()
     {
-        int=7
-        hight.constant=CGFloat((int / 4 + 1) * 50)
+//        int = 7
+        hight.constant=CGFloat((countVar / 4 + 1) * 50)
     }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        int = 7
-        return int // whatever according to api
+//        int = 7
+        if section % 2 == 0
+        {
+            
+        }
+        return countVar // whatever according to api
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -89,11 +93,5 @@ class TheCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDele
         collection.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
     }
     
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
 }

@@ -39,7 +39,7 @@ class friendsPostsTableCell: UITableViewCell {
             
             if (rating - Float(x)) < 1.0 && Float(x) < rating {
                 let mask1 = UIView()
-                mask1.backgroundColor = UIColor.black
+                mask1.backgroundColor = UIColor.blue
                 mask1.frame = CGRect(x: 0, y: 0, width: starRating[x].frame.width * CGFloat(rating - Float(x)), height: starRating[x].frame.height)
                 starRating[x].mask = mask1
             }
